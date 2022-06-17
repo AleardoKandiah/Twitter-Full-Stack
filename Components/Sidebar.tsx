@@ -29,6 +29,9 @@ function Sidebar() {
         <SidebarRow Icon={MailIcon} title='Mesages'/>
         <SidebarRow Icon={BookmarkIcon} title='Bookmarks'/>
         <SidebarRow Icon={CollectionIcon} title='Lists'/>
+        {/* User Icon will be modified to Sign  out when signed in*/}
+        <SidebarRow Icon={UserIcon} title='Sign In'/>
+        <SidebarRow Icon={DotsCircleHorizontalIcon} title='More'/>
     </div>
   )
 }
