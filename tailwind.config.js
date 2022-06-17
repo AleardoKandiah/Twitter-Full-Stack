@@ -5,7 +5,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    // ADD special twitter color for hovering
+    extend: {
+      colors
+    },
   },
   plugins: [],
 }
