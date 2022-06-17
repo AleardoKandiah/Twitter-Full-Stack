@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     // ADD special twitter color for hovering
     extend: {
-      colors
+      colors: {
+        twitter: '#00ADED',
+      }
     },
   },
   plugins: [],

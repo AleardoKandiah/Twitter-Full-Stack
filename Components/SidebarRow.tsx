@@ -24,13 +24,15 @@ function SidebarRow({Icon, title}:Props) {
   return (
     // Introduce flexbox by nature puts items in row
     // Spacing and padding
-    <div className='flex cursor-pointer 
+    // Max-w-fit to only use max width for navbar that is needed
+    <div className='flex max-w-fit cursor-pointer 
     items-center space-x-2 px-4 py-3 
     rounded-full transition-all duration-200 
     hover:bg-gray-100  group'>
       {/* Change icon dimensions */}
         <Icon className= 'h-6 w-6'/>
-        <p className='group-hover:text-blue-600' >{title}</p>
+        {/* import color defined in Tailwindconfig */}
+        <p className='group-hover:text-twitter ' >{title}</p>
     </div>
   )
 }
