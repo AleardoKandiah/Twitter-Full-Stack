@@ -13,6 +13,7 @@ import SidebarRow from './SidebarRow'
 
 // Sidebar icons installed from heroicons by yarn add @heroicons/react
 
+// Flex for inner componets and grid for overall UI
 
 // Fuction export component rfce
 
