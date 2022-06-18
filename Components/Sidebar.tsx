@@ -19,7 +19,8 @@ import SidebarRow from './SidebarRow'
 
 function Sidebar() {
   return (
-    <div className='flex flex-col'>
+    // The Sidebar is given a column size of 2 out of the 9
+    <div className='flex flex-col col-span-2'>
         {/* Twitter icon, classname height and width 10 */}
         <img className='h-10 w-10' src='https://links.papareact.com/drq' alt='' />
     

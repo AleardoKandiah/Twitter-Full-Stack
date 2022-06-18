@@ -14,7 +14,8 @@ const Home: NextPage = () => {
         <title>Twitter TS</title>
       </Head>
 
-      <main>
+    {/* Layout into 9 columns */}
+      <main className='grid grid-cols-9'>
       {/* Sidebar */}
         <Sidebar />
 
