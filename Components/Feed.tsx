@@ -1,5 +1,6 @@
 import { RefreshIcon } from '@heroicons/react/outline'
 import React from 'react'
+import { serialize } from 'v8'
 
 // ===========MIDDLE SECTION FEED COMPONENT ===============
 
@@ -7,7 +8,9 @@ function Feed() {
   return (
 
     // Main Feed given a column size of 5 ot of 9
-    <div className='col-span-5'>
+    // At smaller screen serialize, the feed will take up the additional 2 coplumns from the widget
+    // At default the feed wil take up 7 columns, whichis then increased to 7 at larger screen size
+    <div className='col-span-7 lg:col-span-5'>
            {/* Top of Feed  */}
            {/* give flex property so that are made into a row 
            and centered in the axis and be pushed apart by justify-between*/}

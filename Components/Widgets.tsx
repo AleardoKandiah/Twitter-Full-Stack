@@ -8,7 +8,10 @@ function Widgets() {
     // React twitter embed library
     // Create a search box
     // Margin-top 2 to prevent touching top of page 
-    <div className='px-2 mt-2'>
+    // Apply responsivenes Mobile first and then introduce breakpoints to account for medium size etc
+    // Hide the widget when in mobile screen size of 375px which increases columns size availability by 2
+    // Reapper at large screen size {lg:inline}
+    <div className='px-2 mt-2 col-span-2 hidden lg:inline'>
         <div className='flex items-center space-x-2 border-gray-100 
         p-3 rounded-full mt-2'>
             <SearchIcon className='h-5 w-5 text-gray-400'/>
