@@ -9,7 +9,8 @@ import Widgets from '../Components/Widgets'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    // Apply contstraint to bigger screen view but not on mobile view
+    <div className=" lg:max-w-6xl">
       <Head>
         <title>Twitter TS</title>
       </Head>

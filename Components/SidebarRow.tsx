@@ -34,7 +34,10 @@ function SidebarRow({Icon, title}:Props) {
         {/* import color defined in Tailwindconfig */}
         {/* Hide the text by default for smaller screen size 
         and flex labels inline when in medium screen*/}
-        <p className=' hidden md:inline-flex group-hover:text-twitter ' >{title}</p>
+        {/* By Default text-base font size and light Font
+        as the screeen size increases, text size increases to xl */}
+        <p className=' hidden md:inline-flex 
+        group-hover:text-twitter text-base lg:text-xl' >{title}</p>
     </div>
   )
 }
