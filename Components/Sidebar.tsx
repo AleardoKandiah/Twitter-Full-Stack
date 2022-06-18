@@ -10,6 +10,7 @@ import {
     HomeIcon,
 }  from '@heroicons/react/outline'
 import SidebarRow from './SidebarRow'
+import { serialize } from 'v8'
 
 // Sidebar icons installed from heroicons by yarn add @heroicons/react
 
@@ -20,7 +21,9 @@ import SidebarRow from './SidebarRow'
 function Sidebar() {
   return (
     // The Sidebar is given a column size of 2 out of the 9
-    <div className='flex flex-col col-span-2'>
+    // Responsiveness. in medium screen items align at start
+    // deafult is center at smaller screen size, the labels will be hidden and itemes centered
+    <div className='flex flex-col col-span-2 items-center md:items-start '>
         {/* Twitter icon, classname height and width 10 */}
         <img className='h-10 w-10' src='https://links.papareact.com/drq' alt='' />
     

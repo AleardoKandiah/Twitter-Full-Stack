@@ -32,7 +32,9 @@ function SidebarRow({Icon, title}:Props) {
       {/* Change icon dimensions */}
         <Icon className= 'h-6 w-6'/>
         {/* import color defined in Tailwindconfig */}
-        <p className='group-hover:text-twitter ' >{title}</p>
+        {/* Hide the text by default for smaller screen size 
+        and flex labels inline when in medium screen*/}
+        <p className=' hidden md:inline-flex group-hover:text-twitter ' >{title}</p>
     </div>
   )
 }
