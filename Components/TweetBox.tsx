@@ -1,4 +1,11 @@
 import React from 'react'
+import{
+    CalendarIcon,
+    EmojiHappyIcon,
+    LocationMarkerIcon,
+    PhotographIcon,
+    SearchCircleIcon,
+} from '@heroicons/react/outline'
 
 function TweetBox() {
   return (
@@ -17,7 +24,13 @@ function TweetBox() {
 
         {/* Build a div for tweet icons and submission */}
         <div>
-          <div> Icons </div>
+          
+          <div> 
+            <SearchCircleIcon className='h-5 w-5'/>
+            <EmojiHappyIcon className='h-5 w-5'/>
+            <CalendarIcon className='h-5 w-5'/>
+            <LocationMarkerIcon className='h-5 w-5' />   
+          </div>
 
           <form>Tweet</form>
 
