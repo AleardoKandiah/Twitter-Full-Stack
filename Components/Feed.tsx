@@ -1,6 +1,7 @@
 import { RefreshIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { serialize } from 'v8'
+import TweetBox from './TweetBox'
 
 // ===========MIDDLE SECTION FEED COMPONENT ===============
 
@@ -27,6 +28,7 @@ function Feed() {
         </div>
 
         {/* Tweet box for middle section */}
+        <TweetBox/>
 
     </div>
   )
