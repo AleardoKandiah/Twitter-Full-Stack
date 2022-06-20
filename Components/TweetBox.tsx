@@ -23,16 +23,18 @@ function TweetBox() {
         <input type='text' placeholder="What's Happening?"/>
 
         {/* Build a div for tweet icons and submission */}
-        <div>
+        <div className='flex items-center'>
+          {/* Flex-1 = flex: 1 1 0% */}
           
-          <div> 
+          <div className='flex flex-1 space-x-2 text-twitter'> 
+            <PhotographIcon className='h-5 w-5'/>
             <SearchCircleIcon className='h-5 w-5'/>
             <EmojiHappyIcon className='h-5 w-5'/>
             <CalendarIcon className='h-5 w-5'/>
             <LocationMarkerIcon className='h-5 w-5' />   
           </div>
 
-          <form>Tweet</form>
+          <button className='bg-twitter px-5 py-2 font-bold rounded-full text-white'>Tweet</button>
 
         </div>
       </form>
