@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import{
     CalendarIcon,
     EmojiHappyIcon,
@@ -8,6 +8,9 @@ import{
 } from '@heroicons/react/outline'
 
 function TweetBox() {
+  // useState input to recognose when to disable tweet button
+  const [input, setInput] = useState<string>('')
+
   return (
     <div className='flex space-x-2 p-5'>
       {/* object cover to take avai;able space */}
@@ -21,7 +24,11 @@ function TweetBox() {
 
       <form className='flex flex-1 flex-col'>
         {/* Input form styling  */}
-        <input type='text'
+        {/* Add onchange to recognise when user has typed in */}
+        <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        type='text'
         placeholder="What's Happening?"
         className='h-24 w-full outline-none text-xl placeholder:text-xl '/>
 
@@ -40,8 +47,13 @@ function TweetBox() {
             <LocationMarkerIcon className='h-5 w-5' />
           </div>
 
-          <button className='bg-twitter px-5 py-2 font-bold
-          rounded-full text-white'>Tweet</button>
+          {/* Change button opacity when diabled */}
+          <button
+          disabled={!input}
+          className='bg-twitter
+          px-5 py-2 font-bold
+          rounded-full text-white
+          disabled:opacity-40'>Tweet</button>
 
         </div>
       </form>
