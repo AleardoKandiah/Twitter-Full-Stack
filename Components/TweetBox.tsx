@@ -9,7 +9,7 @@ import{
 
 function TweetBox() {
   return (
-    <div>
+    <div className='flex space-x-2 p-5'>
       {/* object cover to take avai;able space */}
         <img className='h-14 w-14 object-cover rounded-full mt-4' 
         src="https://links.papareact.com/gll" 
@@ -17,10 +17,13 @@ function TweetBox() {
         />
 
       {/* Build submission form which allows to tweet     */}
-    <div>
+    <div className='flex flex-1 pl-2 items-center'>
       
-      <form>
-        <input type='text' placeholder="What's Happening?"/>
+      <form className='flex flex-1 flex-col'>
+        {/* Input form styling  */}
+        <input type='text' 
+        placeholder="What's Happening?" 
+        className='h-24 w-full outline-none text-xl placeholder:text-xl '/>
 
         {/* Build a div for tweet icons and submission */}
         <div className='flex items-center'>
@@ -34,7 +37,8 @@ function TweetBox() {
             <LocationMarkerIcon className='h-5 w-5' />   
           </div>
 
-          <button className='bg-twitter px-5 py-2 font-bold rounded-full text-white'>Tweet</button>
+          <button className='bg-twitter px-5 py-2 font-bold 
+          rounded-full text-white'>Tweet</button>
 
         </div>
       </form>
