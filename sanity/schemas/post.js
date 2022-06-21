@@ -1,65 +1,34 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'tweet',
+  title: 'Tweet',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Text in Tweet',
       type: 'string',
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    },
-  ],
+      name: 'blockTweet',
+      title: 'Block Tweet',
+      description: 'ADMIN Controls: Toggle if Tweet is deemed inappropiate',
+      type: 'boolean',
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
     },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
+    {
+      name: 'username',
+      title: 'Username',
+      type: 'string',
     },
-  },
-}
+    {
+      name: 'profileImg',
+      title: 'Profile Image',
+      type: 'string',
+    },
+    {
+      name: 'image ',
+      title: 'Tweet image',
+      type: 'string',
+    },
+   ],
+  }
