@@ -1,0 +1,1 @@
+// .d.td for type definition files in order to define what a tweet is
