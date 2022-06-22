@@ -2,7 +2,24 @@
 // the tweet APi comes with a TON of info
 // this need to be broken up into tweet and body
 
+
+// build interface to extend tweet body with all other twtitter API info
+export interface Tweet extends TweetBody {
+    _id: string
+    _createAt: string
+    _updateAt: string
+    _rev: string
+    _type: 'tweet'
+    blockTweet: boolean
+}
+
+
+
+
+
+
 // this const wil be accessible to the client
+// setup similar to schema
 export const TweetBody ={
     text: string,
     username: string,
