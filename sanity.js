@@ -3,6 +3,7 @@ import {
 } from 'next-sanity'
 import { config } from 'process'
 
+// need to pass env variable 
 
 // sanityConfig.io dataset pased into 'production'
 const sanityConfig = {
