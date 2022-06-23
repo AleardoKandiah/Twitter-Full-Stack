@@ -47,7 +47,7 @@ function TweetBox() {
             <LocationMarkerIcon className='h-5 w-5' />
           </div>
 
-          {/* Change button opacity when diabled */}
+          {/* Change button opacity when disabled */}
           <button
           disabled={!input}
           className='bg-twitter
