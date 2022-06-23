@@ -16,7 +16,7 @@ import { serialize } from 'v8'
 
 // Flex for inner componets and grid for overall UI
 
-// Fuction export component rfce
+// Function export component rfce
 
 function Sidebar() {
   return (
