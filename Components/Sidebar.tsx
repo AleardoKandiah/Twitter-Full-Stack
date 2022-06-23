@@ -22,7 +22,7 @@ function Sidebar() {
   return (
     // The Sidebar is given a column size of 2 out of the 9
     // Responsiveness. in medium screen items align at start
-    // deafult is center at smaller screen size, the labels will be hidden and itemes centered
+    // deafult is center at smaller screen size, the labels will be hidden and items centered
     <div className='flex flex-col col-span-2 
     items-center md:items-start '>
         
