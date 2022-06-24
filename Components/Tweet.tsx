@@ -1,5 +1,8 @@
 import React from 'react'
 import { Tweet } from '../typings'
+import TimeAgo from 'react-timeago'
+
+// yarn add react-timeago/ yarn --dev @types/react-timeago
 
 
 // feed tweets through
