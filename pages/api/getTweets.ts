@@ -27,8 +27,8 @@ export default async function handler(
 ) {
     // use groq to query sanity CMS and grab backend API
     // execute fetch req to get the tweets back
-    
+
     const tweets: Tweet[] = await sanityClient.fetch(feedQuery)
 
-    res.status(200).json({ name: 'John Doe' })
+    res.status(200).json({ tweets })
 }
