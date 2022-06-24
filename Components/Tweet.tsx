@@ -19,17 +19,27 @@ function Tweet({tweet}: Props) {
             src={tweet.profileImg} 
             alt=''/>
 
-        </div>
-        <div className='flex items-center space-x-1'>
-            {/* direct reference to poster tag */}
-            <p className='mr-1 font-bold'>{tweet.username}</p>
-            <p className='hidden text-sm text-gray-500 sm:inline'>@{tweet.username.replace(/\s+/q, '').toLowerCase()}</p>
+
+            <div>
+                <div className='flex items-center space-x-1'>
+                    {/* direct reference to poster tag */}
+                    <p className='mr-1 font-bold'>{tweet.username}</p>
+                    <p className='hidden text-sm text-gray-500 sm:inline'>@{tweet.username.replace(/\s+/q, '').toLowerCase()}</p>
 
 
-            <TimeAgo
-            className='text-sm text-gray-500'
-            date={tweet._createAt}
-            />
+                    <TimeAgo
+                    className='text-sm text-gray-500'
+                    date={tweet._createAt}
+                    />
+                </div>
+                <p className='pt-1'>{tweet.text}</p>
+
+                {/* only when there is an image */}
+                {tweet.img && (
+                    <img src={tweet.img} alt='' className='m-5 ml-0 mb-1 max-h-60
+                    rounded-lg object-cover shadow'/>
+                )}
+             </div>
         </div>
     </div>
   )
