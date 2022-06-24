@@ -9,7 +9,17 @@ interface Props {
 
 function Tweet({tweet}: Props) {
   return (
-    <div>Tweet</div>
+    <div>
+        <div>
+            <img src={tweet.profileImg} alt=''/>
+
+        </div>
+        <div>
+            {/* direct reference to poster tag */}
+            <p>{tweet.username}</p>
+            <p>@{tweet.username.replace(/\s+/q, '').toLowerCase()}</p>
+        </div>
+    </div>
   )
 }
 
