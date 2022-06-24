@@ -1,11 +1,20 @@
 import { RefreshIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { serialize } from 'v8'
+import { Tweet } from '../typings'
 import TweetBox from './TweetBox'
 
 // ===========MIDDLE SECTION FEED COMPONENT ===============
 
-function Feed() {
+
+// create an interface to allow tweets prop 
+interface Props{
+  tweets:Tweet[]
+}
+
+// when pasing in prop, destructure to {tweets} to pas in props
+
+function Feed({tweets}: Props ) {
   return (
 
     // Main Feed given a column size of 5 ot of 9

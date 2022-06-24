@@ -3,19 +3,25 @@ import Head from 'next/head'
 import Feed from '../Components/Feed'
 import Sidebar from '../Components/Sidebar'
 import Widgets from '../Components/Widgets'
+import { Tweet } from '../typings'
 import { fetchTweets } from '../utils/fetchTweet'
 
 // 3 sections for twitter: Sidebar to the screenLeft, feed in the middle and Widget on the right
 
 
-const Home: NextPage = () => {
+// create an interface for prop
+interface Props {
+  tweets: Tweet[]
+}
+                 
+const Home = ({tweets}: Props) => {
   return (
     // Apply contstraint to bigger screen view but not on mobile view
     // add margin-x auto to balance left and right axes
     // max height of screen so that the container themselves are scrollable and the whole page is static
     // overflow to add scrolling withing the container content
 
-    <div className=" lg:max-w-6xl mx-auto max-h-screen overflow-hidden">
+    <div className="lg:max-w-6xl mx-auto max-h-screen overflow-hidden">
       <Head>
         <title>Twitter TS</title>
       </Head>
@@ -26,7 +32,7 @@ const Home: NextPage = () => {
         <Sidebar />
 
         {/* Feed */}
-        <Feed/>
+        <Feed tweets={tweets}/>
 
         {/* Widget */}
         <Widgets/>
@@ -46,7 +52,7 @@ export const getServerSideProps: GetServerSideProps = async(context) =>{
 
   return {
     props: {
-
-    }
+      tweets,
+    },
   }
 }
