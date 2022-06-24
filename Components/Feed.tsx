@@ -45,7 +45,11 @@ function Feed({tweets}: Props ) {
 
           {/* Feed */}
               <div>
-
+                {/* go to each tweet(JSX) and map, for each twet go through each key (necesary for each list and mapping) */}
+               {/* then also pass the tweet to render in UI */}
+                {tweets.map(tweet =>( 
+                  <TweetComponent key={tweet._id} tweet={tweet}/>                  
+                  ))}
               </div>
     </div>
     <div/></div>
