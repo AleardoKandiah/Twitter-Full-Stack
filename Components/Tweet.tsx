@@ -13,14 +13,23 @@ interface Props {
 function Tweet({tweet}: Props) {
   return (
     <div>
-        <div>
-            <img src={tweet.profileImg} alt=''/>
+        <div className='flex space-x-3'>
+            <img 
+            className='h-10 w-10 rounded-full object-cover' 
+            src={tweet.profileImg} 
+            alt=''/>
 
         </div>
-        <div>
+        <div className='flex items-center space-x-1'>
             {/* direct reference to poster tag */}
-            <p>{tweet.username}</p>
-            <p>@{tweet.username.replace(/\s+/q, '').toLowerCase()}</p>
+            <p className='mr-1 font-bold'>{tweet.username}</p>
+            <p className='hidden text-sm text-gray-500 sm:inline'>@{tweet.username.replace(/\s+/q, '').toLowerCase()}</p>
+
+
+            <TimeAgo
+            className='text-sm text-gray-500'
+            date={tweet._createAt}
+            />
         </div>
     </div>
   )
