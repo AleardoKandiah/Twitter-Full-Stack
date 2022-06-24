@@ -3,6 +3,7 @@ import React from 'react'
 import { serialize } from 'v8'
 import { Tweet } from '../typings'
 import TweetBox from './TweetBox'
+import TweetComponent from '../Components/Tweet'
 
 // ===========MIDDLE SECTION FEED COMPONENT ===============
 
@@ -36,11 +37,20 @@ function Feed({tweets}: Props ) {
              ease-out hover:rotate-180 active:scale-125'/>
         </div>
 
-        {/* Tweet box for middle section */}
-        <TweetBox/>
+          <div>
+            {/* Tweet box for middle section */}
+            <TweetBox/>
+          <div/>
 
+
+          {/* Feed */}
+              <div>
+
+              </div>
     </div>
-  )
+    <div/></div>
+        
+    )
 }
 
 export default Feed
