@@ -47,21 +47,21 @@ function Tweet({tweet}: Props) {
                 )}
              </div>
         </div>
-
-        <div>
-            <div>
+{/* create icons for feed tweet */}
+        <div className='flex justify-between mt-5'>
+            <div className='flex cursor-pointer items-center space-x-3 text-gray-400'>
                <ChatAlt2Icon className='h-5 w-5'/> 
             </div>
 
-            <div>
+            <div className='flex cursor-pointer items-center space-x-3 text-gray-400'>
                 <SwitchHorizontalIcon className='h-5 w-5'/>
             </div>
 
-            <div>
+            <div className='flex cursor-pointer items-center space-x-3 text-gray-400'>
                 <HeartIcon className='h-5 w-5'/>
             </div>
             
-            <div>
+            <div className='flex cursor-pointer items-center space-x-3 text-gray-400'>
                 <UploadIcon className='h-5 w-5'/>
             </div>
         </div>
