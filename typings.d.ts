@@ -2,13 +2,11 @@
 // the tweet APi comes with a TON of info
 // this need to be broken up into tweet and body
 
+import { type } from "os"
+
 
 // build interface to extend tweet body with all other twtitter API info
 export interface Tweet extends TweetBody {
-    img: string
-    text: ReactNode
-    username: ReactNode
-    profileImg: string | undefined
     _id: string
     _createAt: string
     _updateAt: string
@@ -24,11 +22,18 @@ export interface Tweet extends TweetBody {
 
 // this const wil be accessible to the client
 // setup similar to schema
-export const TweetBody ={
-    text: string,
-    username: string,
-    prolfileImg: string,
+export type TweetBody ={
+    text: string
+    username: string
+    prolfileImg: string
     // the image will be optional and not 100% required and so ?
     Image?: string 
 
+}
+
+export type CommentBody = {
+    comment: string
+    tweetId: string
+    username: string
+    profileImg: string
 }
