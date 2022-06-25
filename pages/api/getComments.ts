@@ -1,5 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { groq } from 'next-sanity'
+import { sanityClient } from '../../sanity';
+import { Comment } from '../../typings';
 
 // create a groq query call for comment associated with tweet
 // placeholder $tweetis
@@ -11,13 +14,17 @@ const commentQuery = groq`
 
 `
 
-type Data = {
-  name: string
-}
+type Data = Comment[];
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+    // grab tweet id
+    const { tweetId } = req.query;
+
+    const comments: Comment [] = await sanityClient.fetch(commentQuery, {
+        tweetId,
+    })
+    res.status(200).json(comments)
 }
