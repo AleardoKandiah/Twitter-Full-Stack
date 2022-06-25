@@ -1,6 +1,12 @@
 import React from 'react'
 import { Tweet } from '../typings'
 import TimeAgo from 'react-timeago'
+import {
+    ChatAlt2Icon,
+    HeartIcon,
+    SwitchHorizontalIcon,
+    UploadIcon,
+} from '@heroicons/react/outline'
 
 // yarn add react-timeago/ yarn --dev @types/react-timeago
 
