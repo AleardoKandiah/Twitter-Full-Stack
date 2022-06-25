@@ -7,6 +7,7 @@ import { type } from "os"
 
 // build interface to extend tweet body with all other twtitter API info
 export interface Tweet extends TweetBody {
+    img: string | undefined
     _id: string
     _createAt: string
     _updateAt: string
@@ -44,7 +45,7 @@ export interface Comment extends CommentBody{
     _rev: string
     _type: 'comment'
     _updateAt: string
-    // create a reference field
+    // create a reference field for the tweeet to be associatd with
     tweet: {
         _ref: string
         _type: 'reference'
