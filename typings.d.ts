@@ -7,7 +7,6 @@ import { type } from "os"
 
 // build interface to extend tweet body with all other twtitter API info
 export interface Tweet extends TweetBody {
-    img: string | undefined
     _id: string
     _createAt: string
     _updateAt: string

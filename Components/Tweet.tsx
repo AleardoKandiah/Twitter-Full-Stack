@@ -1,5 +1,5 @@
-import React from 'react'
-import { Tweet } from '../typings'
+import React, { useEffect, useState } from 'react'
+import { Tweet, Comment } from '../typings'
 import TimeAgo from 'react-timeago'
 import {
     ChatAlt2Icon,
@@ -7,6 +7,7 @@ import {
     SwitchHorizontalIcon,
     UploadIcon,
 } from '@heroicons/react/outline'
+import { fetchComments } from '../utils/fetchCommenta'
 
 // yarn add react-timeago/ yarn --dev @types/react-timeago
 
@@ -17,12 +18,28 @@ interface Props {
 }
 
 function Tweet({tweet}: Props) {
+
+    // create piece of state for comments
+    const [comments, setComments] = useState<Comment[]>([])
+
+    // useeffect responsible to fetch the comments
+    const refreshComments = async () => {
+        const comments: Comment[] = await fetchComments(tweet._id)
+        setComments(comments);
+    }
+
+    // when the components mounts, refresh the comments 
+    useEffect(() => {
+        refreshComments();
+    }, [])
+
+
   return (
     <div>
         <div className='flex space-x-3'>
             <img 
             className='h-10 w-10 rounded-full object-cover' 
-            src={tweet.profileImg} 
+            src={tweet.prolfileImg} 
             alt=''/>
 
 
@@ -41,8 +58,8 @@ function Tweet({tweet}: Props) {
                 <p className='pt-1'>{tweet.text}</p>
 
                 {/* only when there is an image */}
-                {tweet.img && (
-                    <img src={tweet.img} alt='' className='m-5 ml-0 mb-1 max-h-60
+                {tweet.Image && (
+                    <img src={tweet.Image} alt='' className='m-5 ml-0 mb-1 max-h-60
                     rounded-lg object-cover shadow-sm'/>
                 )}
              </div>
