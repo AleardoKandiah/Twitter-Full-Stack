@@ -49,13 +49,21 @@ function Tweet({tweet}: Props) {
         </div>
 
         <div>
-            <div></div>
+            <div>
+               <ChatAlt2Icon className='h-5 w-5'/> 
+            </div>
 
-            <div></div>
+            <div>
+                <SwitchHorizontalIcon className='h-5 w-5'/>
+            </div>
 
-            <div></div>
+            <div>
+                <HeartIcon className='h-5 w-5'/>
+            </div>
             
-            <div></div>
+            <div>
+                <UploadIcon className='h-5 w-5'/>
+            </div>
         </div>
     </div>
   )
