@@ -82,6 +82,33 @@ function Tweet({tweet}: Props) {
                 <UploadIcon className='h-5 w-5'/>
             </div>
         </div>
+
+        {/* Comment Box Logic */}
+        <div>
+            {comments?length > 0 && (
+                <div>
+                    {comments.map((comment) => (
+                        <><div key={comment._id}>
+                            <img
+                                src={comment.profileImg}
+                                className='h-7 w-7 rounded-full object-cover'
+                                alt='' />
+                            <div>
+                                <div>
+                                    <p>{comment.username}</p>
+                                    <p>@{comment.username.replace(/\s+/g, '').toLowerCase()} .</p>
+                                </div>
+
+                            </div>
+
+                            <TimeAgo
+                                className='text-sm text-gray-500'
+                                date={comment._createAt} />
+                        </div><p>{comment.comment}</p></>
+                    </div>
+                ))}
+            )}
+        </div>
     </div>
   )
 }
