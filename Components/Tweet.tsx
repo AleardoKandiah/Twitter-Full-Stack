@@ -41,6 +41,16 @@ function Tweet({tweet}: Props) {
                 )}
              </div>
         </div>
+
+        <div>
+            <div></div>
+
+            <div></div>
+
+            <div></div>
+            
+            <div></div>
+        </div>
     </div>
   )
 }
