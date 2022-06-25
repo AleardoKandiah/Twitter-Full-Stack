@@ -37,3 +37,16 @@ export type CommentBody = {
     username: string
     profileImg: string
 }
+
+export interface Comment extends CommentBody{
+    _createAt: string
+    _id: string
+    _rev: string
+    _type: 'comment'
+    _updateAt: string
+    // create a reference field
+    tweet: {
+        _ref: string
+        _type: 'reference'
+    }
+}
