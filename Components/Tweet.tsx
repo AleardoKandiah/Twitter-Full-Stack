@@ -88,7 +88,7 @@ function Tweet({tweet}: Props) {
             {comments?length > 0 && (
                 <div>
                     {comments.map((comment) => (
-                        <><div key={comment._id} className=' flex space-x-2'>
+                        <div key={comment._id} className=' flex space-x-2'>
                             <img
                                 src={comment.profileImg}
                                 className='h-7 w-7 rounded-full object-cover'
@@ -106,7 +106,7 @@ function Tweet({tweet}: Props) {
                         </div>
                         <p>{comment.comment}</p>
                      </div>
-                ))}
+                    ))}
             </div>
             )}
         </div>
